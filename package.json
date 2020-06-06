@@ -11,5 +11,8 @@
   "license": "ISC",
   "dependencies": {
     "@crestron/ch5-crcomlib": "^1.0.0"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4"
   }
 }
