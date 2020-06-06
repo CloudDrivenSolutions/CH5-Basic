@@ -11,8 +11,12 @@ import * as CrComLib from "@crestron/ch5-crcomlib";
 
 // Example of a container of buttons
 function handleSourcePress(e) {
+
   // Sends value from the button to analog join 1 in simpl
-  CrComLib.publishEvent("n", "1", e.target.value);
+  // have to first convert the value to int
+  const value = parseInt(e.target.value, 10);
+  CrComLib.publishEvent("n", "1", value);
+
 
   // interlock logic
   // get any source buttons with active css
@@ -21,9 +25,12 @@ function handleSourcePress(e) {
     Array.from(els).forEach((el) => {
       document.getElementById(el.id).className = "demo";
     });
+
+    // now set the source button that was just pressed to active
   document.getElementById(`src${e.target.value}`).className = "demoActive";
 }
 
+// listens to the class called sources and runs whenever pressed
 document.querySelector(".sources").addEventListener("click", function (event) {
   if (event.target.tagName === "BUTTON") {
     handleSourcePress(event);
