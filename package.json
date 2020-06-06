@@ -1,0 +1,15 @@
+{
+  "name": "standard",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:archive": "ch5-cli archive -p basics -d dist -o tsw"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@crestron/ch5-crcomlib": "^1.0.0"
+  }
+}

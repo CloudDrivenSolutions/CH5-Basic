@@ -1,0 +1,43 @@
+:root {
+    --bg: rgba(25, 59, 102, 0.10);
+    --main: rgba(20, 121, 255, 1);
+    --mainPressed: rgb(164, 192, 228);
+    --font: rgba(25, 59, 104, 1);
+    --fontAccent: rgba(20, 165, 255, 0.3);
+    --buttonFont: rgba(245, 245, 245, 0.837);
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--font);
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+button:focus {
+    outline: none;
+}
+
+.demo {
+    background-color: var(--main);
+    border: 0;
+    border-radius: 10px;
+    color: var(--buttonFont);
+    height: 50px;
+    width: 100px;
+    box-shadow: 5px 7px 15px -1px rgba(0, 0, 0, 0.22);
+}
+
+.demo:active {
+    background-color: var(--mainPressed);
+    color: black;
+}
+
+.demoActive {
+    background-color: rgb(35, 114, 35);
+    color: black;
+    height: 50px;
+    width: 100px;
+    box-shadow: 5px 7px 15px -1px rgba(0, 0, 0, 0.22);
+    border: 0;
+    border-radius: 10px;
+}
