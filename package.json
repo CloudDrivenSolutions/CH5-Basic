@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel index.html",
+    "build": "parcel build index.html --public-url .",
     "build:archive": "ch5-cli archive -p basics -d dist -o tsw"
   },
   "author": "",
