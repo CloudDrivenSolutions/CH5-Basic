@@ -7,7 +7,7 @@
 
 # Initial Setup
 1. If you don't have Node.js installed please install it prior to the steps below
-(https://www.youtube.com/playlist?list=PLN3n1USn4xllZIJyrGvCu5ihs2GoMtk1Q) 
+(https://nodejs.org/en/) 
 
 2.  Verify you have node installed:  `node -v`
 
