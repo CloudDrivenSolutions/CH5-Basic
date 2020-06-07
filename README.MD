@@ -1,0 +1,55 @@
+# Basic Crestron CH5 Example
+## This example shows very basic usage of the Crestron Com Package with Vanilla JS.  
+## Its designed to help those just starting out learn some of the basics of taking HTML, CSS, 
+## and Javascript files communicate via a TSW touch panel to a processor.
+
+## I've tried to put as many comments as possible in these files
+
+# Initial Setup
+1. If you don't have Node.js installed please install it prior to the steps below
+(https://www.youtube.com/playlist?list=PLN3n1USn4xllZIJyrGvCu5ihs2GoMtk1Q) 
+
+2.  Verify you have node installed:  `node -v`
+
+3. Install dependancies: `npm install`  this will install the Crestron Com Library
+
+4. Install dev dependancy: `npm i parcel-bundler --save-dev` 
+        I'm using Parcel for running the dev server as well as building the project in preparation for archiving to ch5z file.
+
+4. Open the project in VSCode
+[Make sure you have at least the Crestron Components extension installed in VSCode.  I've notated some additional suggestions below]
+    a. Prettier
+    b. npm intellisense
+    c. path intellisense
+    d. html snippets
+
+5.  Fix issue with Crestron's Com Library that prevents importing direct into index.js file
+    a.   Open the following file: node_modules/@crestron/ch5-crcomlib/package.json
+    b. Replate 
+            "types": "build_bundles/umd/@types/index.d.ts"
+    c. With 
+            "types": "build_bundles/cjs/@types/index.d.ts",
+            "main": "build_bundles/cjs/cr-com-lib.js",
+
+6.  To start the project run `npm run start`
+      Parcel will start and build the project for testing the html, css, and javascript
+
+7. Open "http://localhost:1234" in your browser
+     Parcel provides hot reloading so you never have to refresh your browser.  Whenever you make a change in your code it
+     automatically rebuild and update in the browser
+
+8.  Creating TSW file
+    a.  run `npm run build`  This will build the project so its ready for archiving
+    b. run `npm run build:archive`  This will create the tsw file and put in the dist folder
+
+
+Folder Structure of Project
+```
+├── assets
+│   ├── css
+           └── styles.css
+│  └── js
+          └── index.js
+├── index.html
+├── package.json
+```

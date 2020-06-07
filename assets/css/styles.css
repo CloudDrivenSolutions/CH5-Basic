@@ -1,3 +1,5 @@
+/* Here I'm creating color variables that you can use throughout the css so you don't have 
+to remember their values */
 :root {
     --bg: rgba(25, 59, 102, 0.10);
     --main: rgba(20, 121, 255, 1);
@@ -13,10 +15,12 @@ body {
     font-family: 'Noto Sans JP', sans-serif;
 }
 
+/* This is added to stop some default things that happen when using the <button> tag */
 button:focus {
     outline: none;
 }
 
+/* This is the class being used to style the buttons in an inactive state */
 .demo {
     background-color: var(--main);
     border: 0;
@@ -27,11 +31,15 @@ button:focus {
     box-shadow: 5px 7px 15px -1px rgba(0, 0, 0, 0.22);
 }
 
+/* This adds some styling whenever you press the button if you aren't using the class demoActive 
+so it looks like you are pressing down on the button */
 .demo:active {
     background-color: var(--mainPressed);
     color: black;
 }
 
+ /* This class is applied to the button in Javascript to show how some basic interlock feedback can
+ be done with javascript and css */
 .demoActive {
     background-color: rgb(35, 114, 35);
     color: black;
